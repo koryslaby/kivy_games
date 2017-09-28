@@ -6,8 +6,6 @@ from kivy.clock import Clock
 from kivy.vector import Vector
 from random import randint
 
-
-
 class PongPaddle(Widget):
     score = NumericProperty(0)
 
@@ -18,8 +16,6 @@ class PongPaddle(Widget):
             bounced = Vector(-1 * vx, vy)
             vel = bounced * 1.1
             ball.velocity = vel.x, vel.y + offset
-
-
 
 class PongBall(Widget):
     # velocity of the ball on x and y axis
@@ -36,8 +32,6 @@ class PongBall(Widget):
     def move(self):
         self.pos = Vector(*self.velocity) + self.pos
 
-
-
 class PongGame(Widget):
     ball = ObjectProperty(None)#creats a reference to PongBall
                                #child widget created
@@ -48,9 +42,7 @@ class PongGame(Widget):
     def serve_ball(self, vel=(4,0)):#had to add vel=(4,0) or it didnt work.
         self.ball.center = self.center
         self.ball.velocity = vel
-        
-
-
+  
 
     def update(self, dt):
         self.ball.move()
@@ -77,9 +69,6 @@ class PongGame(Widget):
             self.player1.center_y = touch.y
         if touch.x > self.width - self.width/3:
             self.player2.center_y = touch.y
-
-                   
-    
 
 class PongApp(App):
     def build(self):

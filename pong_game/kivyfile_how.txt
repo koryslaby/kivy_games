@@ -1,0 +1,23 @@
+#:kivy 1.0.9
+#this is so kivy can check what version you are using
+
+<PongGame>:#everything under this aplies to all of ponggame.
+	canvas: #adding stuff to canvas.
+		Rectangle:#creating a rectangle.
+			pos: self.center_x - 5,0#center_x center of wiget.
+			size: 10, self.height#height is the height of the wiget.
+
+
+	Label: #adding Label wiget
+		font_size:70
+		center_x: root.width / 5
+		top: root.top - 50
+		text: "0"
+
+	Label: #adding Label wiget
+		font_size: 70
+		center_x: root.width * 3 / 4
+		top: root.top - 50
+		text: "0"
+
+

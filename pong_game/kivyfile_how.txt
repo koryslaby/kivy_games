@@ -7,7 +7,6 @@
 			pos: self.center_x - 5,0#center_x center of wiget.
 			size: 10, self.height#height is the height of the wiget.
 
-
 	Label: #adding Label wiget
 		font_size:70
 		center_x: root.width / 5
